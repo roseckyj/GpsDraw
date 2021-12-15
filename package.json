@@ -1,0 +1,48 @@
+{
+  "name": "gps-draw",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://roseckyj.github.io/gps-draw",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/leaflet": "^1.5.12",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "leaflet": "^1.6.0",
+    "onchange": "^6.1.0",
+    "prettier": "^2.0.2",
+    "proj4leaflet": "^1.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.6.3",
+    "react-scripts": "3.4.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "prettier": "prettier --config .prettierrc --write \"{src,server,public,scripts}/**/*.{ts,tsx,js,jsx,html,css}\"",
+    "prettier-watch": "onchange \"{src,server,public,scripts}/**/*.{ts,tsx,js,jsx,html,css}\" -- prettier --config .prettierrc --write \"{{changed}}\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
