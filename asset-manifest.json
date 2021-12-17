@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GpsDraw/static/css/main.878666fa.chunk.css",
-    "main.js": "/GpsDraw/static/js/main.640d4de6.chunk.js",
-    "main.js.map": "/GpsDraw/static/js/main.640d4de6.chunk.js.map",
+    "main.js": "/GpsDraw/static/js/main.9d846f87.chunk.js",
+    "main.js.map": "/GpsDraw/static/js/main.9d846f87.chunk.js.map",
     "runtime-main.js": "/GpsDraw/static/js/runtime-main.723ba4bf.js",
     "runtime-main.js.map": "/GpsDraw/static/js/runtime-main.723ba4bf.js.map",
     "static/css/2.68a81a89.chunk.css": "/GpsDraw/static/css/2.68a81a89.chunk.css",
     "static/js/2.8514b39c.chunk.js": "/GpsDraw/static/js/2.8514b39c.chunk.js",
     "static/js/2.8514b39c.chunk.js.map": "/GpsDraw/static/js/2.8514b39c.chunk.js.map",
     "index.html": "/GpsDraw/index.html",
-    "precache-manifest.a23f0faa18d9362e95baaf9afda058ca.js": "/GpsDraw/precache-manifest.a23f0faa18d9362e95baaf9afda058ca.js",
+    "precache-manifest.64cf0d7ff56e5050653bb8a28f956ecc.js": "/GpsDraw/precache-manifest.64cf0d7ff56e5050653bb8a28f956ecc.js",
     "service-worker.js": "/GpsDraw/service-worker.js",
     "static/css/2.68a81a89.chunk.css.map": "/GpsDraw/static/css/2.68a81a89.chunk.css.map",
     "static/css/main.878666fa.chunk.css.map": "/GpsDraw/static/css/main.878666fa.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.68a81a89.chunk.css",
     "static/js/2.8514b39c.chunk.js",
     "static/css/main.878666fa.chunk.css",
-    "static/js/main.640d4de6.chunk.js"
+    "static/js/main.9d846f87.chunk.js"
   ]
 }
