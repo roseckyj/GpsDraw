@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52d5853ce2c8ec4b5bd270aac85c9c41",
+    "revision": "3ebf8f0793b84706c09fa9bae45dd62d",
     "url": "/GpsDraw/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GpsDraw/static/css/2.68a81a89.chunk.css"
   },
   {
-    "revision": "e4cca42b0b09dbd143fd",
+    "revision": "d4552ce457bb318a0273",
     "url": "/GpsDraw/static/css/main.878666fa.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GpsDraw/static/js/2.8514b39c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e4cca42b0b09dbd143fd",
-    "url": "/GpsDraw/static/js/main.7a10415d.chunk.js"
+    "revision": "d4552ce457bb318a0273",
+    "url": "/GpsDraw/static/js/main.640d4de6.chunk.js"
   },
   {
     "revision": "e68d02026b8efc3d0e24",
