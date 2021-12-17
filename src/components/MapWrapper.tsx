@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { CircleMarker, Map, Polyline, TileLayer, ZoomControl } from 'react-leaflet';
 import { shapes } from '../shapes';
@@ -7,6 +8,7 @@ import { Point } from '../utils/Point';
 const THRESHOLD = 10;
 const USE_MOUSE = (document.URL.split('#').length > 1 ? document.URL.split('#')[1] : '').includes('&mouse');
 const FUTURE_POINTS = 4;
+const API = 'https://gps-draw.herokuapp.com';
 
 type IMapWrapperProps = {};
 
@@ -19,6 +21,8 @@ type IMapWrapperState = {
     drawing: boolean;
     wasCloseToStart: boolean;
     error: string | null;
+    nickname: string;
+    completed: boolean;
 };
 
 export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWrapperState> {
@@ -31,6 +35,8 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
         drawing: false,
         wasCloseToStart: false,
         error: null,
+        nickname: '',
+        completed: false,
     };
 
     positionChanged(position: Point) {
@@ -160,11 +166,44 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
                 <div className="notification">
                     {this.state.drawing && this.state.pointId === this.shape.length && (
                         <div className="alert alert-primary" role="alert">
-                            <p>Už jsi skoro u cíle! Až budeš chtít ukončit tvar, můžeš kliknout na tlačítko</p>
+                            <p>
+                                Už jsi skoro u cíle! Až budeš chtít ukončit tvar, můžeš kliknout na tlačítko a dokončit
+                                obrazec
+                            </p>
+                            <p>Abychom věděli, kdo nám to nakreslil, napiš nám, prosím, svoje jméno</p>
+                            <div className="form-floating mb-3">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="floatingInput"
+                                    placeholder="Tvoje křestní jméno"
+                                    onChange={(event) => this.setState({ nickname: event.target.value })}
+                                    value={this.state.nickname}
+                                />
+                                <label htmlFor="floatingInput">Tvoje křestní jméno</label>
+                            </div>
                             <button
                                 type="button"
                                 className="btn btn-primary"
-                                onClick={() => this.setState({ drawing: false })}
+                                onClick={() => {
+                                    axios
+                                        .post(
+                                            `${API}/save`,
+                                            {
+                                                points: this.state.points,
+                                                shape: this.shape,
+                                                nickname: encodeURIComponent(this.state.nickname),
+                                            },
+                                            {},
+                                        )
+                                        .then(function (response) {
+                                            console.log(response);
+                                        })
+                                        .catch(function (error) {
+                                            console.log(error);
+                                        });
+                                    this.setState({ drawing: false, completed: true });
+                                }}
                             >
                                 Dokončit obrazec
                             </button>
@@ -172,7 +211,10 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
                     )}
                     {!this.state.drawing && this.state.pointId === 0 && this.state.wasCloseToStart && (
                         <div className="alert alert-primary" role="alert">
-                            <p>Vítej! Už jsi skoro na startu. Až budeš chtít začít, můžeš kliknout na tlačítko</p>
+                            <p>
+                                Vítej! Už jsi skoro na startu. Až budeš chtít začít, můžeš kliknout na tlačítko a začít
+                                objevovat
+                            </p>
                             <button
                                 type="button"
                                 className="btn btn-primary"
@@ -180,6 +222,11 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
                             >
                                 Začít odkrývat
                             </button>
+                        </div>
+                    )}
+                    {this.state.completed && (
+                        <div className="alert alert-success" role="alert">
+                            Gratulujeme! Můžeš se vrátit k ohni a ukázat nám, co jsi zvládl(a) objevit.
                         </div>
                     )}
                 </div>
