@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "92e6edc55ed49df325420bf4f8018890",
+    "revision": "13896d5048ec8cc9138beed6568c9fb8",
     "url": "/GpsDraw/index.html"
   },
   {
-    "revision": "91180babb111dc14c448",
+    "revision": "cc89d0b277fba120bcaa",
     "url": "/GpsDraw/static/css/main.61de912c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GpsDraw/static/js/2.3507810c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "91180babb111dc14c448",
-    "url": "/GpsDraw/static/js/main.0718910e.chunk.js"
+    "revision": "cc89d0b277fba120bcaa",
+    "url": "/GpsDraw/static/js/main.62e9a677.chunk.js"
   },
   {
     "revision": "e68d02026b8efc3d0e24",

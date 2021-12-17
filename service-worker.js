@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/GpsDraw/precache-manifest.072e4e4964087840b6cb0aa8214d718b.js"
+  "/GpsDraw/precache-manifest.95eb7458ad1b51d802e8e653558cf335.js"
 );
 
 self.addEventListener('message', (event) => {
