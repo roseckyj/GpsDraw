@@ -9,6 +9,10 @@ export class App extends React.Component<{}, AppState> {
     componentDidMount() {}
 
     render() {
-        return <MapWrapper />;
+        return (
+            <>
+                <MapWrapper />
+            </>
+        );
     }
 }

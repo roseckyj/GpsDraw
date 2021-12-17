@@ -6,6 +6,7 @@ import { Point } from '../utils/Point';
 
 const THRESHOLD = 10;
 const USE_MOUSE = true;
+const FUTURE_POINTS = 4;
 
 type IMapWrapperProps = {};
 
@@ -17,6 +18,7 @@ type IMapWrapperState = {
     pointId: number;
     drawing: boolean;
     wasCloseToStart: boolean;
+    error: string | null;
 };
 
 export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWrapperState> {
@@ -28,6 +30,7 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
         pointId: 0,
         drawing: false,
         wasCloseToStart: false,
+        error: null,
     };
 
     positionChanged(position: Point) {
@@ -51,15 +54,21 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
     }
 
     get shape() {
+        const path = window.location.pathname.split('/');
+        const shapename = path[path.length - 1];
+        if (!shapes[shapename]) {
+            this.setState({ error: 'Vybraný tvar neexistuje' });
+            return [];
+        }
         return shapes.hvezda;
     }
 
     requestLocation = () => {
         if (!navigator.geolocation) {
-            console.error('Geolocation is not supported by your browser');
+            this.setState({ error: 'Zařízení nepodporuje sledování polohy' });
         } else {
             navigator.geolocation.getCurrentPosition(this.gotLocation, () => {
-                console.error('Location error!');
+                this.setState({ error: 'Přístup k poloze byl odepřen' });
             });
         }
     };
@@ -74,6 +83,22 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
     }
 
     render() {
+        if (this.state.error) {
+            return (
+                <div className="errorWrapper">
+                    <div className="alert alert-danger" role="alert">
+                        <p>Vypadá to, že se něco nepovedlo. Prosím obnovte stránku a zkuste to znovu.</p>
+                        <p>
+                            <strong>{this.state.error}</strong>
+                        </p>
+                        <button type="button" className="btn btn-danger" onClick={() => window.location.reload()}>
+                            Obnovit stránku
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
         return (
             <>
                 <Map
@@ -89,8 +114,19 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
                 >
                     <ZoomControl position="topright" />
                     <TileLayer url="https://mapserver.mapy.cz/ophoto-m/{z}-{x}-{y}" opacity={0.3} />
-                    <Polyline color="black" positions={this.shape.filter((val, i) => i <= this.state.pointId)} />
+                    <Polyline
+                        color="black"
+                        positions={this.shape.filter((val, i) => i <= this.state.pointId - FUTURE_POINTS)}
+                    />
+                    <Polyline
+                        color="black"
+                        positions={this.shape.filter(
+                            (val, i) => i <= this.state.pointId && i >= this.state.pointId - FUTURE_POINTS,
+                        )}
+                        className="dashed"
+                    />
                     <Polyline color="#7579EE" positions={this.state.points} opacity={0.2} weight={30} />
+
                     {this.state.location && (
                         <CircleMarker
                             center={this.state.location!}
