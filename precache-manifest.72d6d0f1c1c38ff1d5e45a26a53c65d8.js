@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cb0fd6dc602aa35ae98e7b6556146b45",
+    "revision": "7681ebfbf4850b69dad90a19534d6521",
     "url": "/gps-draw/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gps-draw/static/css/2.68a81a89.chunk.css"
   },
   {
-    "revision": "78e9905c6fe3c28d1c2a",
-    "url": "/gps-draw/static/css/main.fd39a73e.chunk.css"
+    "revision": "6925dcf7f705c1d23457",
+    "url": "/gps-draw/static/css/main.878666fa.chunk.css"
   },
   {
     "revision": "2140c14b523db4a7401f",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gps-draw/static/js/2.8514b39c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "78e9905c6fe3c28d1c2a",
-    "url": "/gps-draw/static/js/main.4dddfd96.chunk.js"
+    "revision": "6925dcf7f705c1d23457",
+    "url": "/gps-draw/static/js/main.13e56c4a.chunk.js"
   },
   {
     "revision": "24725ef7e25602971f55",
