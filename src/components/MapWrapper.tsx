@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircleMarker, Map, Polyline, Popup, TileLayer, ZoomControl } from 'react-leaflet';
+import { CircleMarker, Map, Polyline, TileLayer, ZoomControl } from 'react-leaflet';
 import { shapes } from '../shapes';
 import { getDistance } from '../utils/getDistance';
 import { Point } from '../utils/Point';
@@ -104,19 +104,6 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
                         fillOpacity={0.8}
                     ></CircleMarker>
                 )}
-                {(this.state.pointId === this.shape.length || true) && (
-                    <CircleMarker
-                        center={this.shape[this.shape.length - 1]}
-                        radius={15}
-                        color="transparent"
-                        fillOpacity={0}
-                        isActive
-                    >
-                        <Popup closeOnEscapeKey={false} closeOnClick={false} autoClose={false} closeButton={false}>
-                            Už jsi blízko konce, až budeš chtít, můžeš vypnout kreslení...
-                        </Popup>
-                    </CircleMarker>
-                )}
 
                 <img
                     src={process.env.PUBLIC_URL + '/assets/ostrovy-logo.png'}
@@ -124,6 +111,7 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
                     className="logoOp"
                 />
                 <img src={process.env.PUBLIC_URL + '/assets/duha-logo.png'} alt="Duha AZ" className="logoDuha" />
+                <div className="notification"></div>
             </Map>
         );
     }
