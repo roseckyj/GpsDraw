@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "426b29f09da3d0a714b153dc7b9f7580",
+    "revision": "25e5b746847aee5af0bc4fe3439774e8",
     "url": "/GpsDraw/index.html"
   },
   {
-    "revision": "2140c14b523db4a7401f",
+    "revision": "da542d0ddf99ffd5a176",
     "url": "/GpsDraw/static/css/2.68a81a89.chunk.css"
   },
   {
-    "revision": "b93de7cbe9ef62b03551",
+    "revision": "eecd9cf0c60757350236",
     "url": "/GpsDraw/static/css/main.878666fa.chunk.css"
   },
   {
-    "revision": "2140c14b523db4a7401f",
-    "url": "/GpsDraw/static/js/2.8514b39c.chunk.js"
+    "revision": "da542d0ddf99ffd5a176",
+    "url": "/GpsDraw/static/js/2.47665e3d.chunk.js"
   },
   {
     "revision": "3c56d32f1a0e992453f57615992b86b8",
-    "url": "/GpsDraw/static/js/2.8514b39c.chunk.js.LICENSE.txt"
+    "url": "/GpsDraw/static/js/2.47665e3d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b93de7cbe9ef62b03551",
-    "url": "/GpsDraw/static/js/main.9d846f87.chunk.js"
+    "revision": "eecd9cf0c60757350236",
+    "url": "/GpsDraw/static/js/main.42693d66.chunk.js"
   },
   {
     "revision": "e68d02026b8efc3d0e24",
