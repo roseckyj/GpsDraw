@@ -5,7 +5,7 @@ import { getDistance } from '../utils/getDistance';
 import { Point } from '../utils/Point';
 
 const THRESHOLD = 10;
-const USE_MOUSE = true;
+const USE_MOUSE = (document.URL.split('#').length > 1 ? document.URL.split('#')[1] : '').includes('&mouse');
 const FUTURE_POINTS = 4;
 
 type IMapWrapperProps = {};
@@ -54,13 +54,17 @@ export default class MapWrapper extends React.Component<IMapWrapperProps, IMapWr
     }
 
     get shape() {
-        const path = window.location.pathname.split('/');
-        const shapename = path[path.length - 1];
-        if (!shapes[shapename]) {
-            this.setState({ error: 'Vybraný tvar neexistuje' });
+        const shapename = (document.URL.split('#').length > 1 ? document.URL.split('#')[1] : '').split('&')[0];
+        const available = ', dostupné tvary jsou ' + Object.keys(shapes).join(', ');
+        if (shapename.length === 0) {
+            this.setState({ error: 'V adrese chybí název tvaru' + available });
             return [];
         }
-        return shapes.hvezda;
+        if (!shapes[shapename]) {
+            this.setState({ error: 'Vybraný tvar neexistuje' + available });
+            return [];
+        }
+        return shapes[shapename];
     }
 
     requestLocation = () => {
