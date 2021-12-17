@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/gpsDraw/static/css/main.878666fa.chunk.css",
-    "main.js": "/gpsDraw/static/js/main.133a8504.chunk.js",
-    "main.js.map": "/gpsDraw/static/js/main.133a8504.chunk.js.map",
-    "runtime-main.js": "/gpsDraw/static/js/runtime-main.648ef313.js",
-    "runtime-main.js.map": "/gpsDraw/static/js/runtime-main.648ef313.js.map",
-    "static/css/2.68a81a89.chunk.css": "/gpsDraw/static/css/2.68a81a89.chunk.css",
-    "static/js/2.8514b39c.chunk.js": "/gpsDraw/static/js/2.8514b39c.chunk.js",
-    "static/js/2.8514b39c.chunk.js.map": "/gpsDraw/static/js/2.8514b39c.chunk.js.map",
-    "index.html": "/gpsDraw/index.html",
-    "precache-manifest.44a7ba41779a792699fc5fa80635c32d.js": "/gpsDraw/precache-manifest.44a7ba41779a792699fc5fa80635c32d.js",
-    "service-worker.js": "/gpsDraw/service-worker.js",
-    "static/css/2.68a81a89.chunk.css.map": "/gpsDraw/static/css/2.68a81a89.chunk.css.map",
-    "static/css/main.878666fa.chunk.css.map": "/gpsDraw/static/css/main.878666fa.chunk.css.map",
-    "static/js/2.8514b39c.chunk.js.LICENSE.txt": "/gpsDraw/static/js/2.8514b39c.chunk.js.LICENSE.txt"
+    "main.css": "/GpsDraw/static/css/main.878666fa.chunk.css",
+    "main.js": "/GpsDraw/static/js/main.fecd8b10.chunk.js",
+    "main.js.map": "/GpsDraw/static/js/main.fecd8b10.chunk.js.map",
+    "runtime-main.js": "/GpsDraw/static/js/runtime-main.723ba4bf.js",
+    "runtime-main.js.map": "/GpsDraw/static/js/runtime-main.723ba4bf.js.map",
+    "static/css/2.68a81a89.chunk.css": "/GpsDraw/static/css/2.68a81a89.chunk.css",
+    "static/js/2.8514b39c.chunk.js": "/GpsDraw/static/js/2.8514b39c.chunk.js",
+    "static/js/2.8514b39c.chunk.js.map": "/GpsDraw/static/js/2.8514b39c.chunk.js.map",
+    "index.html": "/GpsDraw/index.html",
+    "precache-manifest.b2c59086740efb3408fddd85f990ffc6.js": "/GpsDraw/precache-manifest.b2c59086740efb3408fddd85f990ffc6.js",
+    "service-worker.js": "/GpsDraw/service-worker.js",
+    "static/css/2.68a81a89.chunk.css.map": "/GpsDraw/static/css/2.68a81a89.chunk.css.map",
+    "static/css/main.878666fa.chunk.css.map": "/GpsDraw/static/css/main.878666fa.chunk.css.map",
+    "static/js/2.8514b39c.chunk.js.LICENSE.txt": "/GpsDraw/static/js/2.8514b39c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.648ef313.js",
+    "static/js/runtime-main.723ba4bf.js",
     "static/css/2.68a81a89.chunk.css",
     "static/js/2.8514b39c.chunk.js",
     "static/css/main.878666fa.chunk.css",
-    "static/js/main.133a8504.chunk.js"
+    "static/js/main.fecd8b10.chunk.js"
   ]
 }
